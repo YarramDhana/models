@@ -5,8 +5,10 @@ from django.db.models.functions  import Length
 # Create your views here.
 def model(request):
     QLTO=Topic.objects.all()
+    QLTO=Topic.objects.all().filter()
     d={'topics':QLTO}
     return render(request,'model.html',d)
+
 
 
 def webpage(request):
